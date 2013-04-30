@@ -1,7 +1,8 @@
 ; Filename: kaiten-suwappa.nasm
 ; Author:  Lucas Kauffman
 ; Website:  http://cloud101.eu
-; Purpose: 
+; License: GPLv3 (http://www.gnu.org/licenses/gpl-3.0.txt)
+; Software provided without any warranty
 
 global _start			
 
